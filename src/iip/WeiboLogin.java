@@ -89,6 +89,7 @@ private CloseableHttpClient httpclient = HttpClients.createDefault();
 			httppost.setEntity(new UrlEncodedFormEntity(params));
 			CloseableHttpResponse response = httpclient.execute(httppost,localContext);
 			int statuts_code=response.getStatusLine().getStatusCode();
+			System.out.println(statuts_code);
 			if(statuts_code==302) flag = true;
 			
 		}catch(Exception e) {
@@ -127,7 +128,7 @@ private CloseableHttpClient httpclient = HttpClients.createDefault();
 	
 	
 	public static void main(String[] args) {
-		WeiboLogin wb = new WeiboLogin("wqchina007@126.com","7027887");
+		WeiboLogin wb = new WeiboLogin("1445715631@qq.com","19921008ay");
 		String cookie = wb.getCookies();
 		System.out.println(cookie);
 	}
